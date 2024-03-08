@@ -7,7 +7,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Info_Screen extends StatelessWidget {
-  Info_Screen({super.key});
+  final String name;
+  final String year;
+  final String topspeed;
+  final String allow;
+  Info_Screen(
+      {super.key,
+      required this.name,
+      required this.year,
+      required this.topspeed,
+      required this.allow});
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +80,17 @@ class Info_Screen extends StatelessWidget {
             ),
             SizedBox(
               height: 150,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: BMW_500_Li.length,
+                itemBuilder: (context, index) {
+                  return CustomImages(
+                      image1: BMW_500_Li[index]['image1'],
+                      image2: BMW_500_Li[index]['image2'],
+                      image3: BMW_500_Li[index]['image3'],
+                      image4: BMW_500_Li[index]['image4']);
+                },
+              ),
               // child: ListView.builder(
               //   itemCount: carDetailList.length,
               //   scrollDirection: Axis.horizontal,
@@ -90,6 +110,17 @@ class Info_Screen extends StatelessWidget {
             ),
             SizedBox(
               height: 150,
+              child: ListView.builder(
+                itemCount: BMW_X1.length,
+                itemBuilder: (context, index) {
+                  return Details(
+                    name: BMW_X1[index]['name'],
+                    year: BMW_X1[index]['year'],
+                    topspeed: BMW_X1[index]['Top Speed'],
+                    allow: BMW_X1[index]['KM Allow per day'],
+                  );
+                },
+              ),
               // child: ListView.builder(
               //   itemCount: carDetailList.length,
               //   itemBuilder: (context, index) {

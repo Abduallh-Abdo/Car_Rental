@@ -90,87 +90,82 @@ List BMW_X6 = [
     "KM Allow per day": '530 KM',
   },
 ];
+List Mercedus_C = [
+  {
+    'name': "Mercedes C",
+    'image1': 'mercedes/Mercedus C/1.1.jpg',
+    'image2': 'mercedes/Mercedus C/6.1.jpg',
+    'image3': 'mercedes/Mercedus C/6.2.jpg',
+    'image4': 'mercedes/Mercedus C/6.3.jpg',
+    'image5': 'mercedes/Mercedus C/6.4.jpg',
+    'year': "2019",
+    'top speed': "249 km/h",
+  },];
 // Mercedes
 List Mercedes_CLS = [
   {
-    "name": 'Mercedes CLS',
-    "image1": 'assets/list_cars/2014 BMW X1.jpg',
-    "image2": 'assets/list_cars/2014 BMW X1.jpg',
-    "image3": 'assets/list_cars/2014 BMW X1.jpg',
-    "image4": 'assets/list_cars/2014 BMW X1.jpg',
-    "image5": 'assets/list_cars/2014 BMW X1.jpg',
-    'year': "2019",
-    'topspead': "249 km/h",
-    "KM Allow per day": '300 KM',
+   'name': "Mercedes-AMG C63",
+    'image1': 'mercedes/Mercedes CLS/1.1.jpg',
+    'image2': 'mercedes/Mercedes CLS/1.2.jpg',
+    'image3': 'mercedes/Mercedes CLS/1.3.jpg',
+    'image4': 'mercedes/Mercedes CLS/1.4.jpg',
+    'image5': 'mercedes/Mercedes CLS/1.5.jpg',
+    'year': "2021",
+    'top speed': "280 km/h"
   },
 ];
 List Merce_E_class = [
   {
-    "name": 'Merce E-class',
-    "image1": 'assets/list_cars/2014 BMW X1.jpg',
-    "image2": 'assets/list_cars/2014 BMW X1.jpg',
-    "image3": 'assets/list_cars/2014 BMW X1.jpg',
-    "image4": 'assets/list_cars/2014 BMW X1.jpg',
-    "image5": 'assets/list_cars/2014 BMW X1.jpg',
-    'year': "2021",
-    'topspead': "280 km/h",
-    "KM Allow per day": '200 KM',
+      'name': 'Mercedes-Benz E-Class 2017 ',
+    'image1': 'mercedes/Merce E-class/2.1.jpg',
+    'image2': 'mercedes/Merce E-class/2.2.jpg',
+    'image3': 'mercedes/Merce E-class/2.3.jpg',
+    'image4': 'mercedes/Merce E-class/2.4.jpg',
+    'image5': 'mercedes/Merce E-class/2.5.jpg',
+    'year': '2017',
+    'top speed': "249 km/h"
+ 
   },
 ];
 List Mercedes_s = [
   {
-    "name": 'Mercedes s',
-    "image1": 'assets/list_cars/2014 BMW X1.jpg',
-    "image2": 'assets/list_cars/2014 BMW X1.jpg',
-    "image3": 'assets/list_cars/2014 BMW X1.jpg',
-    "image4": 'assets/list_cars/2014 BMW X1.jpg',
-    "image5": 'assets/list_cars/2014 BMW X1.jpg',
-    "year": '2006',
-    "Top Speed": '250 km/h',
-    "KM Allow per day": '300 KM',
+ 'name': 'Mercedes-AMG C43',
+    'image1': 'mercedes/Mercedes Sl/4.1.jpg',
+    'image2': 'mercedes/Mercedes Sl/4.2.jpg',
+    'image3': 'mercedes/Mercedes Sl/4.3.jpg',
+    'image4': 'mercedes/Mercedes Sl/4.4.jpg',
+    'image5': 'mercedes/Mercedes Sl/4.5.jpg',
+    'year': '2024',
+    'top speed': "250 km/h",
   },
 ];
 List Mercedes_Sl = [
   {
-    "name": 'Mercedes Sl',
-    "image1": 'assets/list_cars/2014 BMW X1.jpg',
-    "image2": 'assets/list_cars/2014 BMW X1.jpg',
-    "image3": 'assets/list_cars/2014 BMW X1.jpg',
-    "image4": 'assets/list_cars/2014 BMW X1.jpg',
-    "image5": 'assets/list_cars/2014 BMW X1.jpg',
-    "year": '2006',
-    "Top Speed": '250 km/h',
-    "KM Allow per day": '300 KM',
+     'name': 'Mercedes-Benz S-Class 2022',
+    'image1': 'mercedes/Mercedes s/3.1.jpg',
+    'image2': 'mercedes/Mercedes s/3.2.jpg',
+    'image3': 'mercedes/Mercedes s/3.3.jpg',
+    'image4': 'mercedes/Mercedes s/3.4.jpg',
+    'image5': 'mercedes/Mercedes s/3.5.jpg',
+    'year': '2022',
+    'top speed': "209 km/h",
   },
 ];
 List Mercedes_SLC = [
-  {
-    "name": "Mercedes SLC",
-    "image1": 'assets/list_cars/2014 BMW X1.jpg',
-    "image2": 'assets/list_cars/2014 BMW X1.jpg',
-    "image3": 'assets/list_cars/2014 BMW X1.jpg',
-    "image4": 'assets/list_cars/2014 BMW X1.jpg',
-    "image5": 'assets/list_cars/2014 BMW X1.jpg',
-    "year": '2006',
-    "Top Speed": '250 km/h',
-    "KM Allow per day": '350 KM',
+   {
+    'name': "Mercedes-AMG C63",
+    'image1': 'mercedes/Mercedes CLS/1.1.jpg',
+    'image2': 'mercedes/Mercedes CLS/1.2.jpg',
+    'image3': 'mercedes/Mercedes CLS/1.3.jpg',
+    'image4': 'mercedes/Mercedes CLS/1.4.jpg',
+    'image5': 'mercedes/Mercedes CLS/1.5.jpg',
+    'year': "2021",
+    'top speed': "280 km/h"
   },
 ];
-List Mercedus_C = [
-  {
-    "name": "Mercedus C",
-    "image1": 'assets/list_cars/2014 BMW X1.jpg',
-    "image2": 'assets/list_cars/2014 BMW X1.jpg',
-    "image3": 'assets/list_cars/2014 BMW X1.jpg',
-    "image4": 'assets/list_cars/2014 BMW X1.jpg',
-    "image5": 'assets/list_cars/2014 BMW X1.jpg',
-    'year': "2019",
-    'topspead': "249 km/h",
-    "KM Allow per day": '300 KM',
-  },
-];
+
 List Ford_V8 = [
-  {
+  
     {
     'name': 'Ford V8',
     'image1': 'Ford/Ford V8/Ford Mustang V-8 USA 2024.jpeg',
@@ -182,7 +177,7 @@ List Ford_V8 = [
     'year': '2024',
     'KM allow per day': '350',
   },
-  },
+  
 ];
 List ford_f_200 = [
 {

@@ -7,8 +7,9 @@ import 'package:flutter/material.dart';
 // import 'package:shadow/shadow.dart';
 
 class Home_Screen extends StatelessWidget {
+   String? name;
   Customs custom = Customs();
-  Home_Screen({super.key});
+  Home_Screen({super.key,this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class Home_Screen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                TopBar(),
+                TopBar(username: name!),
                 custom.headModels(car_model: 'BMW'),
                 SizedBox(
                   height: 250,
@@ -33,12 +34,12 @@ class Home_Screen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => Info_Screen(),
-                            ),
-                          );
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (_) => Info_Screen(name:,year: ,allow: ,topspeed: ,),
+                          //   ),
+                          // );
                         },
                         child: CustomContaineHome(
                           image: BMWCars[index]['image'],
@@ -63,12 +64,12 @@ class Home_Screen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => Info_Screen(),
-                            ),
-                          );
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (_) => Info_Screen(),
+                          //   ),
+                          // );
                         },
                         child: CustomContaineHome(
                           image: MercedesCar[index]['image'],
@@ -93,12 +94,12 @@ class Home_Screen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => Info_Screen(),
-                            ),
-                          );
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (_) => Info_Screen(),
+                          //   ),
+                          // );
                         },
                         child: CustomContaineHome(
                           image: FordCars[index]['image'],
@@ -123,12 +124,12 @@ class Home_Screen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) => Info_Screen(),
-                            ),
-                          );
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (_) => Info_Screen(),
+                          //   ),
+                          // );
                         },
                         child: CustomContaineHome(
                           image: AlfaCars[index]['image'],

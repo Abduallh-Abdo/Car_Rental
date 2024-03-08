@@ -65,16 +65,28 @@ flutter:
     - assets/list_cars/
     - assets/
     - assets/list_info_car/BMW/
-    - assets/list_info_car/Alfa/Alfa Mito/
-    - assets/list_info_car/Alfa/Alfa romeo
-    - assets/list_info_car/Alfa/Alfa-Romeo-4C
+    # - assets/list_info_car/Alfa/Alfa Mito/
+    # - assets/list_info_car/Alfa/Alfa romeo/
+    # - assets/list_info_car/Alfa/Alfa-Romeo-4C/
     - assets/list_info_car/BMW/BMW i4/
     - assets/list_info_car/BMW/BMW 750Li/
     - assets/list_info_car/BMW/BMW 500Li/
+    - assets/list_info_car/Mercedes/Merce E-class/
+    - assets/list_info_car/Mercedes/Mercedes CLS/
+    - assets/list_info_car/Mercedes/Mercedes Sl/
+    - assets/list_info_car/Mercedes/Mercedes SLC/
+    - assets/list_info_car/Mercedes/Mercedus C/
     - assets/list_cars/Mercedes E-class.jpg
     - assets/list_cars/Mercedus C.jpeg
     - assets/list_cars/Alpha Mito.jpeg
     - assets/list_cars/Alpha Mito.jpeg
+    - assets/list_info_car/Ford/
+    - assets/list_info_car/Ford/Ford territory/
+    - assets/list_info_car/Ford/Ford V8/
+    - assets/list_info_car/Ford/Ford V10/
+    - assets/list_info_car/Ford/Ford-f-150/
+    - assets/list_info_car/Ford/Ford-f-200/
+    - assets/list_info_car/Ford/Ford-mach-e/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

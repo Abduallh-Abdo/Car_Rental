@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class TopBar extends StatelessWidget {
-  TopBar({Key? key, this.username});
+  String username;
+  TopBar({Key? key,  required this.username});
 
-  String? username;
 
   @override
   Widget build(BuildContext context) {
@@ -29,31 +29,20 @@ class TopBar extends StatelessWidget {
           //     backgroundImage: AssetImage('assets/images/ergo_proxy.jpg'),
           //   ),
           // ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
+           Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Text(
-                      'Welcome,',
-                      style: TextStyle(
+               Text(
+                      'Welcome,$username',
+                      style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
-                      ' Ahmed',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
                 Text(
                   'Egypt-cairo',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 20,
                   ),
                 ),

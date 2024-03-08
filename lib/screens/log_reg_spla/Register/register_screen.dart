@@ -116,7 +116,7 @@ class _RegisterSCreenState extends State<RegisterSCreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (_) => Home_Screen(),
+                                builder: (_) => Home_Screen(name: widget.nameController.text,),
                               ),
                             );
                           } else if (widget.passwordController.text !=

@@ -12,45 +12,43 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => LoginScreen()));
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(backgroundColor: Colors.black),
-      body: Stack(alignment: Alignment.bottomLeft, children: [
-        Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage('assets/images/image_splash.jpg'),
+      body: Stack(
+        alignment: Alignment.bottomLeft,
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage('assets/images/image_splash.jpg'),
+              ),
             ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 40),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              CustomButton(
-                buttonText: 'Sign Up',
-                fontSize: 28,
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => RegisterSCreen()));
-                },
+          const Center(
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 150),
+              child: Text(
+                'Cars Rental',
+                style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
-              CustomButton(
-                buttonText: 'Login',
-                fontSize: 30,
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
-                },
-              ),
-            ],
+            ),
           ),
-        ),
-      ]),
+        ],
+      ),
     );
   }
 }
