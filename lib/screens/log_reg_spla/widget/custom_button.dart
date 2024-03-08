@@ -21,14 +21,14 @@ class _CustomButtonState extends State<CustomButton> {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.amber,
+          backgroundColor: const Color(0xffF4CE14),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25))),
       onPressed: widget.onPressed,
       child: Text(
         widget.buttonText,
         style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: widget.fontSize,
             fontWeight: FontWeight.bold),
       ),

@@ -1,7 +1,10 @@
+import 'package:car_rental/List_info_car.dart';
 import 'package:car_rental/screens/Booking/booking_screen.dart';
-import 'package:car_rental/screens/Top_bar/topbar.dart';
+import 'package:car_rental/screens/Info/custom_details.dart';
+import 'package:car_rental/screens/Info/custom_images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Info_Screen extends StatelessWidget {
   Info_Screen({super.key});
@@ -9,188 +12,96 @@ class Info_Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Details',
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: ListView(
           children: [
-            TopBar(),
             const SizedBox(
               height: 10,
             ),
-            Container(
-              width: 400,
-              height: 200,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.0),
-                // Set the border radius here
-                image: const DecorationImage(
-                  image: AssetImage('assets/images/car.jpg'),
-                  // Replace with your image URL
-                  fit: BoxFit.cover,
+            InkWell(
+              onTap: () {
+                showDialog(
+                  context: context,
+                  barrierDismissible: true,
+                  builder: (context) => AlertDialog(
+                    backgroundColor: Colors.transparent,
+                    contentPadding: EdgeInsets.zero,
+                    content: ClipRRect(
+                      borderRadius: BorderRadius.circular(25),
+                      child: Container(
+                        width: 250,
+                        height: 200,
+                        color: Colors.white,
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              // fit: BoxFit.cover,
+                              image: AssetImage('assets/images/car3.jpg'),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                );
+              },
+              child: Container(
+                margin: const EdgeInsets.all(8),
+                width: 400,
+                height: 200,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.0),
+                  image: const DecorationImage(
+                    image: AssetImage('assets/images/car3.jpg'),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
             SizedBox(
               height: 150,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          actions: [
-                            Column(
-                              children: [
-                                Image.asset(
-                                  'assets/images/car5.jpg',
-                                ),
-                                ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                      backgroundColor: Colors.amber),
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                  child: const Text(
-                                    'Cancel',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                    child: Image.asset(
-                      'assets/images/car5.jpg',
-                      width: 120,
-                      height: 150,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  Image.asset(
-                    'assets/images/car3.jpg',
-                    width: 120,
-                    height: 150,
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Image.asset(
-                    'assets/images/car2.jpg',
-                    width: 120,
-                    height: 150,
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Image.asset(
-                    'assets/images/car2.jpg',
-                    width: 120,
-                    height: 150,
-                  ),
-                ],
-              ),
+              // child: ListView.builder(
+              //   itemCount: carDetailList.length,
+              //   scrollDirection: Axis.horizontal,
+              //   itemBuilder: (context, index) {
+              //     final carDetails = carDetailList[index];
+              //     return customImages(
+              //       image1: carDetails['image1']??'',
+              //       image2: carDetails['image2']??'',
+              //       image3: carDetails['image3']??'',
+              //       image4: carDetails['image4']??'',
+              //     );
+              //   },
+              // ),
             ),
             const SizedBox(
               height: 15,
             ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text(
-                      "Trip Price",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "1 day trip",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "750 total miles",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "Trip TOTAL",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Text(
-                      "SAR 70.87/day",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "SAR 70.87/day",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "FREE",
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 15,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      "SAR 70.87/day",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+            SizedBox(
+              height: 150,
+              // child: ListView.builder(
+              //   itemCount: carDetailList.length,
+              //   itemBuilder: (context, index) {
+              //     final carDetails = carDetailList[index];
+              //     return Details(
+              //       name: carDetails['name'] ?? '',
+              //       year: carDetails['year'] ?? '',
+              //       topspeed: carDetails['Top Speed'] ?? '',
+              //       allow: carDetails['KM Allow per day'] ?? '',
+              //     );
+              //   },
+              // ),
             ),
             const SizedBox(
               height: 20,
@@ -201,7 +112,7 @@ class Info_Screen extends StatelessWidget {
                 height: 50,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.amber,
+                    backgroundColor: const Color(0xffF4CE14),
                   ),
                   onPressed: () {
                     Navigator.push(

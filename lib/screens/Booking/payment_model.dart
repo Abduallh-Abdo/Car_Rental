@@ -26,7 +26,8 @@ class _PaymentModelState extends State<PaymentModel> {
         margin: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          color: widget.isSelected ? const Color(0xff3DA7E1) : Colors.grey,
+          color:
+              widget.isSelected ? const Color(0xffF4CE14) : Color(0xffC0C0C0),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

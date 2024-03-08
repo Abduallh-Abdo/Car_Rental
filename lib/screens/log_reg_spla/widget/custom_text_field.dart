@@ -66,7 +66,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               return TextInputType.text;
           }
         })(),
-        cursorColor: Colors.blue,
+        cursorColor: const Color(0xff495E57),
         decoration: InputDecoration(
           suffixIcon:
               widget.label == 'Password' || widget.label == 'Confirm Password'
@@ -81,10 +81,15 @@ class _CustomTextFieldState extends State<CustomTextField> {
                     )
                   : const Text(''),
           focusedBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.blue)),
+            borderSide: BorderSide(
+              color: Color(0xff495E57),
+            ),
+          ),
           label: Text(
             widget.label,
-            style: const TextStyle(color: Colors.grey),
+            style: const TextStyle(
+              color: Color(0xff303030),
+            ),
           ),
           hintText: 'Enter your ${widget.label}',
           border: const OutlineInputBorder(),

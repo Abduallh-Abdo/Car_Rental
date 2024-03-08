@@ -26,28 +26,36 @@ class _BookScreenState extends State<BookScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text(
+          'Booking',
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.only(left: 15, right: 15),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              TopBar(),
               const SizedBox(
                 height: 15,
               ),
               TextFormField(
                 decoration: InputDecoration(
                     labelText: 'Address',
-                    labelStyle: const TextStyle(color: Color(0xff3DA7E1)),
+                    labelStyle: const TextStyle(color: Colors.black),
                     hintText: 'Enter your address',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    hoverColor: Colors.blueAccent,
+                    hoverColor: Color(0xff495E57),
                     focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Color(0xff3DA7E1),
+                        color: Color(0xff495E57),
                       ),
                     )),
               ),
@@ -60,8 +68,16 @@ class _BookScreenState extends State<BookScreen> {
                     height: 290,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: const Color(0xff3DA7E1),
+                      // color: const Color(0xff3DA7E1),
                       borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.01),
+                          spreadRadius: 1,
+                          blurRadius: 10,
+                          offset: const Offset(0, 3),
+                        ),
+                      ],
                     ),
                   ),
                   Container(
@@ -85,7 +101,9 @@ class _BookScreenState extends State<BookScreen> {
                       children: [
                         const Text(
                           'Depart',
-                          style: TextStyle(color: Color(0xff3DA7E1)),
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                         const SizedBox(
                           height: 10,
@@ -125,7 +143,7 @@ class _BookScreenState extends State<BookScreen> {
                         ),
                         const Text(
                           'Arrival',
-                          style: TextStyle(color: Color(0xff3DA7E1)),
+                          style: TextStyle(color: Colors.black),
                         ),
                         const SizedBox(
                           height: 10,
@@ -134,7 +152,7 @@ class _BookScreenState extends State<BookScreen> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             border: Border.all(
-                              color: Colors.black,
+                              color: const Color(0xff495E57),
                               width: 1,
                             ),
                           ),
@@ -246,23 +264,41 @@ class _BookScreenState extends State<BookScreen> {
                         colorIcon = !colorIcon; // Toggle the colorIcon variable
                       });
                     },
-                    icon: Icon(
-                        Icons.check_circle), // Change the icon as per your requirement
-                    color: colorIcon
-                        ? const Color(0xff3DA7E1)
-                        : null,
+                    icon: const Icon(Icons
+                        .check_circle), // Change the icon as per your requirement
+                    color: colorIcon ? const Color(0xff3DA7E1) : null,
                   ),
                 ),
               const SizedBox(
                 height: 20,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      backgroundColor: Color.fromARGB(208, 255, 255, 255),
+                      showCloseIcon: true,
+                      closeIconColor: Colors.black,
+                      duration: Duration(seconds: 2),
+                      content: Text(
+                        'Booking confirmed!',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  );
+                  Future.delayed(Duration(seconds: 2), () {
+                    Navigator.of(context).pop();
+                  });
+                },
                 style: ButtonStyle(
                   backgroundColor:
-                      MaterialStateProperty.all<Color>(const Color(0xff3DA7E1)),
+                      MaterialStateProperty.all<Color>(const Color(0xffF4CE14)),
                   fixedSize: MaterialStateProperty.all<Size>(
-                    const Size(400, 50), // Adjust width and height as needed
+                    const Size(400, 50),
                   ),
                 ),
                 child: const Row(
@@ -279,6 +315,7 @@ class _BookScreenState extends State<BookScreen> {
                   ],
                 ),
               ),
+
               const SizedBox(
                 height: 10,
               ),

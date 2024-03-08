@@ -1,4 +1,3 @@
-
 import 'package:car_rental/screens/Home/homeScreen.dart';
 import 'package:car_rental/screens/log_reg_spla/Register/register_screen.dart';
 import 'package:car_rental/screens/log_reg_spla/widget/custom_row.dart';
@@ -50,7 +49,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 CustomTextField(
                   controller: widget.emailController,
                   label: 'Email',
-                  
                   validatorMessage: 'Email is required',
                 ),
                 const SizedBox(
@@ -72,8 +70,11 @@ class _LoginScreenState extends State<LoginScreen> {
                               borderRadius: BorderRadius.circular(10)),
                           backgroundColor: Colors.blue),
                       onPressed: () {
-                        setState(() { 
-                          if (widget.formKey.currentState!.validate()) {
+                        setState(() {
+                          if (widget.formKey.currentState!.validate() &&
+                              widget.emailController.text ==
+                                  'Dansho@gmail.com' &&
+                              widget.passwordController.text == '12345678') {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
