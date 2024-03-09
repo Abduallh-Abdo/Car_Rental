@@ -79,15 +79,19 @@ flutter:
     - assets/list_info_car/BMW/BMW 500Li/
     - assets/list_cars/Alpha Mito.jpeg
     - assets/list_cars/Alpha Mito.jpeg
-    - assets/list_info_car/Ford/
+    - assets/list_info_car/Mercedes/
+    - assets/list_info_car/Mercedes/Merce E-class/
+    - assets/list_info_car/Mercedes/Mercedes CLS/
+    - assets/list_info_car/Mercedes/Mercedes s/
+    - assets/list_info_car/Mercedes/Mercedes Sl/
+    - assets/list_info_car/Mercedes/Mercedes SLC/
+    - assets/list_info_car/Mercedes/Mercedus C/
     - assets/list_info_car/Ford/Ford territory/
     - assets/list_info_car/Ford/Ford V8/
     - assets/list_info_car/Ford/Ford V10/
     - assets/list_info_car/Ford/Ford-f-150/
     - assets/list_info_car/Ford/Ford-f-200/
     - assets/list_info_car/Ford/Ford-mach-e/
-    - assets/list_info_car/Mercedes/
-    - assets/list_info_car/Mercedes/Merce E-class/2.1.jpg
     - assets/car.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

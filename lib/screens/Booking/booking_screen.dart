@@ -2,8 +2,6 @@ import 'package:car_rental/screens/Booking/add_cars.dart';
 import 'package:car_rental/screens/Booking/payment_model.dart';
 import 'package:car_rental/screens/Booking/time_date_model.dart';
 import 'package:car_rental/screens/Home/homeScreen.dart';
-import 'package:car_rental/screens/Top_bar/topbar.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -33,6 +31,7 @@ class _BookScreenState extends State<BookScreen> {
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
+            fontFamily: 'Rakkas',
           ),
         ),
         centerTitle: true,
@@ -48,8 +47,15 @@ class _BookScreenState extends State<BookScreen> {
               TextFormField(
                 decoration: InputDecoration(
                     labelText: 'Address',
-                    labelStyle: const TextStyle(color: Colors.black),
+                    labelStyle: const TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Rakkas',
+                    ),
                     hintText: 'Enter your address',
+                    hintStyle: const TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Rakkas',
+                    ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -104,6 +110,7 @@ class _BookScreenState extends State<BookScreen> {
                           'Depart',
                           style: TextStyle(
                             color: Colors.black,
+                            fontFamily: 'Rakkas',
                           ),
                         ),
                         const SizedBox(
@@ -144,7 +151,10 @@ class _BookScreenState extends State<BookScreen> {
                         ),
                         const Text(
                           'Arrival',
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'Rakkas',
+                          ),
                         ),
                         const SizedBox(
                           height: 10,
@@ -237,7 +247,11 @@ class _BookScreenState extends State<BookScreen> {
                   ),
                   child: const Text(
                     '+      Add New Card',
-                    style: TextStyle(color: Colors.black, fontSize: 25),
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 25,
+                      fontFamily: 'Rakkas',
+                    ),
                   ),
                 ),
               ),
@@ -287,6 +301,7 @@ class _BookScreenState extends State<BookScreen> {
                           color: Colors.black,
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
+                          fontFamily: 'Rakkas',
                         ),
                       ),
                     ),
@@ -314,11 +329,19 @@ class _BookScreenState extends State<BookScreen> {
                   children: [
                     Text(
                       'Book Now',
-                      style: TextStyle(color: Colors.white, fontSize: 25),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontFamily: 'Rakkas',
+                      ),
                     ),
                     Text(
                       '150 \$',
-                      style: TextStyle(color: Colors.white, fontSize: 25),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontFamily: 'Rakkas',
+                      ),
                     ),
                   ],
                 ),
@@ -334,4 +357,3 @@ class _BookScreenState extends State<BookScreen> {
     );
   }
 }
-

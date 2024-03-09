@@ -76,6 +76,7 @@ class CustomContaineHome extends StatelessWidget {
                               color: Color(0xff101820),
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
+                              fontFamily: 'Rakkas',
                             ),
                           ),
                           const SizedBox(
@@ -83,7 +84,10 @@ class CustomContaineHome extends StatelessWidget {
                           ),
                           Text(
                             year,
-                            style: const TextStyle(fontWeight: FontWeight.bold),
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Rakkas',
+                            ),
                           ),
                         ],
                       ),
@@ -93,6 +97,7 @@ class CustomContaineHome extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
+                        fontFamily: 'Rakkas',
                       ),
                     ),
                   ],

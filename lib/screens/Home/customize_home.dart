@@ -1,14 +1,8 @@
-import 'package:car_rental/screens/Booking/booking_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Customs {
-  // ignore: non_constant_identifier_names
-  // String car_model;
-  // String image;
-  // // ignore: non_constant_identifier_names
-  // String car_name;
-  // String price;
+  
   // ignore: non_constant_identifier_names
   Widget headModels({required String car_model}) {
     return Row(
@@ -17,7 +11,11 @@ class Customs {
         Text(
           car_model,
           style: const TextStyle(
-              color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),
+            color: Colors.black,
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Rakkas',
+          ),
         ),
       ],
     );
@@ -41,18 +39,12 @@ class Customs {
         ),
         decoration: BoxDecoration(
           color: Colors.amber,
-          // color: Color.fromARGB(179, 167, 209, 255),
           border: Border.all(width: 2, color: Colors.black),
           borderRadius: BorderRadius.circular(15),
         ),
         child: Stack(
           children: [
             Container(
-              // margin: EdgeInsets.only(
-              //   top: 5,
-              //   left: 10,
-              //   right: 10,
-              // ),
               width: double.infinity,
               height: 150,
               clipBehavior: Clip.antiAlias,
@@ -99,6 +91,7 @@ class Customs {
                                   style: const TextStyle(
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold,
+                                    fontFamily: 'Rakkas',
                                   ),
                                 ),
                                 const SizedBox(
@@ -107,6 +100,7 @@ class Customs {
                                 Text(
                                   year,
                                   style: const TextStyle(
+                                      fontFamily: 'Rakkas',
                                       fontWeight: FontWeight.bold),
                                 ),
                               ],
@@ -125,6 +119,7 @@ class Customs {
                       Text(
                         price,
                         style: const TextStyle(
+                          fontFamily: 'Rakkas',
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),

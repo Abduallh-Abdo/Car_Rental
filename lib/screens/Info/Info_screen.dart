@@ -7,11 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Info_Screen extends StatelessWidget {
- 
   final Map car;
-  Info_Screen({super.key, required this.car
-    
-      });
+  Info_Screen({super.key, required this.car});
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +19,7 @@ class Info_Screen extends StatelessWidget {
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
+            fontFamily: 'Rakkas',
           ),
         ),
         centerTitle: true,
@@ -48,9 +46,9 @@ class Info_Screen extends StatelessWidget {
                         height: 200,
                         color: Colors.white,
                         child: Container(
-                          decoration:  BoxDecoration(
+                          decoration: BoxDecoration(
                             image: DecorationImage(
-                              // fit: BoxFit.cover,
+                              fit: BoxFit.cover,
                               image: AssetImage(car['image']),
                             ),
                           ),
@@ -66,7 +64,7 @@ class Info_Screen extends StatelessWidget {
                 height: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20.0),
-                  image:  DecorationImage(
+                  image: DecorationImage(
                     image: AssetImage(car['image']),
                     fit: BoxFit.cover,
                   ),
@@ -75,13 +73,15 @@ class Info_Screen extends StatelessWidget {
             ),
             SizedBox(
               height: 150,
-              child: CustomImages(images: car['images'],),
+              child: CustomImages(
+                images: car['images'],
+              ),
             ),
             const SizedBox(
               height: 15,
             ),
             SizedBox(
-              height: 150,
+              height: 200,
               child: ListView.builder(
                 itemCount: BMW_X1.length,
                 itemBuilder: (context, index) {
@@ -89,6 +89,7 @@ class Info_Screen extends StatelessWidget {
                     name: car['name'],
                     year: car['year'],
                     topspeed: car['speed'],
+                    price: car['price'],
                     allow: car['KM Allow per day'],
                   );
                 },
@@ -97,26 +98,24 @@ class Info_Screen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Center(
-              child: SizedBox(
-                width: double.infinity,
-                height: 50,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xffF4CE14),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xffF4CE14),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BookScreen(),
                   ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => BookScreen(),
-                      ),
-                    );
-                  },
-                  child: const Text(
-                    'Book Now',
-                    style: TextStyle(color: Colors.white, fontSize: 26),
-                  ),
+                );
+              },
+              child: const Text(
+                'Book Now',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 26,
+                  fontFamily: 'Rakkas',
                 ),
               ),
             )

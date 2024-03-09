@@ -37,7 +37,11 @@ class _PaymentModelState extends State<PaymentModel> {
                 : const Icon(Icons.monetization_on),
             Text(
               widget.title,
-              style: const TextStyle(color: Colors.black, fontSize: 20),
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontFamily: 'Rakkas',
+              ),
             ),
           ],
         ),

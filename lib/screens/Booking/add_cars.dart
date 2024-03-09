@@ -20,7 +20,12 @@ class _AddNewCard_ScreenState extends State<AddNewCard_Screen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ADD CARD'),
+        title: const Text(
+          'ADD CARD',
+          style: TextStyle(
+            fontFamily: 'Rakkas',
+          ),
+        ),
         centerTitle: true,
       ),
       body: Form(

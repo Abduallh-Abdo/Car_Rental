@@ -1,4 +1,3 @@
-import 'package:car_rental/screens/Home/homeScreen.dart';
 import 'package:car_rental/screens/log_reg_spla/Splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 

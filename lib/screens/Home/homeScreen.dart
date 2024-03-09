@@ -95,8 +95,9 @@ class Home_Screen extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) =>
-                                  Info_Screen(car: MercedesCar[index]),
+                              builder: (_) => Info_Screen(
+                                car: MercedesCar[index],
+                              ),
                             ),
                           );
                         },
@@ -114,35 +115,35 @@ class Home_Screen extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                // custom.headModels(car_model: 'Ford'),
-                // SizedBox(
-                //   height: 250,
-                //   child: ListView.builder(
-                //     scrollDirection: Axis.horizontal,
-                //     itemCount: FordCars.length,
-                //     itemBuilder: (context, index) {
-                //       return InkWell(
-                //         onTap: () {
-                //           Navigator.push(
-                //             context,
-                //             MaterialPageRoute(
-                //               builder: (_) => Info_Screen(
-                //                 car: FordCars[index],
-                //               ),
-                //             ),
-                //           );
-                //         },
-                //         child: CustomContaineHome(
-                //           image: FordCars[index]['image'],
-                //           name: FordCars[index]['name'],
-                //           year: FordCars[index]['year'],
-                //           speed: FordCars[index]['speed'],
-                //           price: FordCars[index]['price'],
-                //         ),
-                //       );
-                //     },
-                //   ),
-                // ),
+                custom.headModels(car_model: 'Ford'),
+                SizedBox(
+                  height: 250,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: FordCars.length,
+                    itemBuilder: (context, index) {
+                      return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Info_Screen(
+                                car: FordCars[index],
+                              ),
+                            ),
+                          );
+                        },
+                        child: CustomContaineHome(
+                          image: FordCars[index]['image'],
+                          name: FordCars[index]['name'],
+                          year: FordCars[index]['year'],
+                          speed: FordCars[index]['speed'],
+                          price: FordCars[index]['price'],
+                        ),
+                      );
+                    },
+                  ),
+                ),
                 SizedBox(
                   height: 30,
                 ),

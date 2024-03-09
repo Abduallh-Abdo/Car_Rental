@@ -6,12 +6,14 @@ class Details extends StatelessWidget {
   final String year;
   final String topspeed;
   final String allow;
+  final String price;
   const Details({
     super.key,
     required this.name,
     required this.year,
     required this.topspeed,
     required this.allow,
+    required this.price,
   });
 
   @override
@@ -25,9 +27,11 @@ class Details extends StatelessWidget {
             Text(
               "Name",
               style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Rakkas',
+              ),
             ),
             SizedBox(
               height: 10,
@@ -36,7 +40,8 @@ class Details extends StatelessWidget {
               "Top Speed",
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 15,
+                fontFamily: 'Rakkas',
+                fontSize: 20,
               ),
             ),
             SizedBox(
@@ -46,7 +51,8 @@ class Details extends StatelessWidget {
               "Year",
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 15,
+                fontFamily: 'Rakkas',
+                fontSize: 20,
               ),
             ),
             SizedBox(
@@ -56,7 +62,16 @@ class Details extends StatelessWidget {
               "Allowed Km per day",
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 15,
+                fontFamily: 'Rakkas',
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              "Price",
+              style: TextStyle(
+                color: Colors.black,
+                fontFamily: 'Rakkas',
+                fontSize: 20,
               ),
             ),
           ],
@@ -66,9 +81,11 @@ class Details extends StatelessWidget {
             Text(
               name,
               style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
+                color: Colors.black,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Rakkas',
+              ),
             ),
             const SizedBox(
               height: 10,
@@ -77,7 +94,8 @@ class Details extends StatelessWidget {
               topspeed,
               style: const TextStyle(
                 color: Colors.black,
-                fontSize: 15,
+                fontFamily: 'Rakkas',
+                fontSize: 25,
               ),
             ),
             const SizedBox(
@@ -87,7 +105,8 @@ class Details extends StatelessWidget {
               year,
               style: const TextStyle(
                 color: Colors.black,
-                fontSize: 15,
+                fontFamily: 'Rakkas',
+                fontSize: 25,
               ),
             ),
             const SizedBox(
@@ -97,7 +116,16 @@ class Details extends StatelessWidget {
               allow,
               style: const TextStyle(
                 color: Colors.black,
-                fontSize: 15,
+                fontSize: 25,
+                fontFamily: 'Rakkas',
+              ),
+            ),
+            Text(
+              price,
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 25,
+                fontFamily: 'Rakkas',
               ),
             ),
           ],

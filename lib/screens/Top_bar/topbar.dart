@@ -37,6 +37,7 @@ class TopBar extends StatelessWidget {
                       'Welcome,$username',
                       style: const TextStyle(
                         fontSize: 20,
+                        fontFamily: 'Rakkas',
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -44,6 +45,7 @@ class TopBar extends StatelessWidget {
                   'Egypt-cairo',
                   style: const TextStyle(
                     fontSize: 20,
+                    fontFamily: 'Rakkas',
                   ),
                 ),
               ],
