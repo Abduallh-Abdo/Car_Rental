@@ -1,6 +1,7 @@
 import 'package:car_rental/screens/Booking/add_cars.dart';
 import 'package:car_rental/screens/Booking/payment_model.dart';
 import 'package:car_rental/screens/Booking/time_date_model.dart';
+import 'package:car_rental/screens/Home/homeScreen.dart';
 import 'package:car_rental/screens/Top_bar/topbar.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +53,7 @@ class _BookScreenState extends State<BookScreen> {
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    hoverColor: Color(0xff495E57),
+                    hoverColor: const Color(0xff495E57),
                     focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide(
                         color: Color(0xff495E57),
@@ -290,8 +291,15 @@ class _BookScreenState extends State<BookScreen> {
                       ),
                     ),
                   );
-                  Future.delayed(Duration(seconds: 2), () {
-                    Navigator.of(context).pop();
+                  Future.delayed(const Duration(seconds: 2), () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Home_Screen(
+                          name: 'Ahemd',
+                        ),
+                      ),
+                    );
                   });
                 },
                 style: ButtonStyle(
@@ -327,22 +335,3 @@ class _BookScreenState extends State<BookScreen> {
   }
 }
 
-///old Appbar
-// appBar: AppBar(
-//   backgroundColor: Colors.white,
-//   leading: const CircleAvatar(
-//     backgroundImage: AssetImage('images/Cute dpz.jpeg'),
-//     radius: 8,
-//   ),
-//   title: const Text(
-//     'Location',
-//     style: TextStyle(fontWeight: FontWeight.bold),
-//   ),
-//   bottom: PreferredSize(
-//     preferredSize: const Size.fromHeight(15),
-//     child: Container(
-//       color: const Color(0xff3DA7E1),
-//       height: 1,
-//     ),
-//   ),
-// ),

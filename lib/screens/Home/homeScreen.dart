@@ -4,12 +4,11 @@ import 'package:car_rental/screens/Home/customize_home.dart';
 import 'package:car_rental/screens/Info/Info_screen.dart';
 import 'package:car_rental/screens/Top_bar/topbar.dart';
 import 'package:flutter/material.dart';
-// import 'package:shadow/shadow.dart';
 
 class Home_Screen extends StatelessWidget {
-   String? name;
+  String? name;
   Customs custom = Customs();
-  Home_Screen({super.key,this.name});
+  Home_Screen({super.key, this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +24,35 @@ class Home_Screen extends StatelessWidget {
             child: Column(
               children: [
                 TopBar(username: name!),
+                custom.headModels(car_model: 'Alfa'),
+                SizedBox(
+                  height: 250,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: AlfaCars.length,
+                    itemBuilder: (context, index) {
+                      return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Info_Screen(
+                                car: AlfaCars[index],
+                              ),
+                            ),
+                          );
+                        },
+                        child: CustomContaineHome(
+                          image: AlfaCars[index]['image'],
+                          name: AlfaCars[index]['name'],
+                          year: AlfaCars[index]['year'],
+                          speed: AlfaCars[index]['speed'],
+                          price: AlfaCars[index]['price'],
+                        ),
+                      );
+                    },
+                  ),
+                ),
                 custom.headModels(car_model: 'BMW'),
                 SizedBox(
                   height: 250,
@@ -34,12 +62,12 @@ class Home_Screen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (_) => Info_Screen(name:,year: ,allow: ,topspeed: ,),
-                          //   ),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => Info_Screen(car: BMWCars[index]),
+                            ),
+                          );
                         },
                         child: CustomContaineHome(
                           image: BMWCars[index]['image'],
@@ -64,12 +92,13 @@ class Home_Screen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (_) => Info_Screen(),
-                          //   ),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) =>
+                                  Info_Screen(car: MercedesCar[index]),
+                            ),
+                          );
                         },
                         child: CustomContaineHome(
                           image: MercedesCar[index]['image'],
@@ -82,66 +111,38 @@ class Home_Screen extends StatelessWidget {
                     },
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                custom.headModels(car_model: 'Ford'),
-                SizedBox(
-                  height: 250,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: FordCars.length,
-                    itemBuilder: (context, index) {
-                      return InkWell(
-                        onTap: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (_) => Info_Screen(),
-                          //   ),
-                          // );
-                        },
-                        child: CustomContaineHome(
-                          image: FordCars[index]['image'],
-                          name: FordCars[index]['name'],
-                          year: FordCars[index]['year'],
-                          speed: FordCars[index]['speed'],
-                          price: FordCars[index]['price'],
-                        ),
-                      );
-                    },
-                  ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                custom.headModels(car_model: 'Alfa'),
-                SizedBox(
-                  height: 250,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: AlfaCars.length,
-                    itemBuilder: (context, index) {
-                      return InkWell(
-                        onTap: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (_) => Info_Screen(),
-                          //   ),
-                          // );
-                        },
-                        child: CustomContaineHome(
-                          image: AlfaCars[index]['image'],
-                          name: AlfaCars[index]['name'],
-                          year: AlfaCars[index]['year'],
-                          speed: AlfaCars[index]['speed'],
-                          price: AlfaCars[index]['price'],
-                        ),
-                      );
-                    },
-                  ),
-                ),
+                // custom.headModels(car_model: 'Ford'),
+                // SizedBox(
+                //   height: 250,
+                //   child: ListView.builder(
+                //     scrollDirection: Axis.horizontal,
+                //     itemCount: FordCars.length,
+                //     itemBuilder: (context, index) {
+                //       return InkWell(
+                //         onTap: () {
+                //           Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //               builder: (_) => Info_Screen(
+                //                 car: FordCars[index],
+                //               ),
+                //             ),
+                //           );
+                //         },
+                //         child: CustomContaineHome(
+                //           image: FordCars[index]['image'],
+                //           name: FordCars[index]['name'],
+                //           year: FordCars[index]['year'],
+                //           speed: FordCars[index]['speed'],
+                //           price: FordCars[index]['price'],
+                //         ),
+                //       );
+                //     },
+                //   ),
+                // ),
                 SizedBox(
                   height: 30,
                 ),

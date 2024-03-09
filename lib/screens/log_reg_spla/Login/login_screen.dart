@@ -73,12 +73,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         setState(() {
                           if (widget.formKey.currentState!.validate() &&
                               widget.emailController.text ==
-'Dansho@gmail.com' &&
+                                  'Dansho@gmail.com' &&
                               widget.passwordController.text == '12345678') {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (_) => Home_Screen(name: 'Dansho',)));
+                                    builder: (_) => Home_Screen(name: 'Ahmed',)));
                           }
                         });
                       },

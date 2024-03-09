@@ -6,13 +6,13 @@ class Details extends StatelessWidget {
   final String year;
   final String topspeed;
   final String allow;
-  const Details(
-      {super.key,
-      required this.name,
-      required this.year,
-      required this.topspeed,
-      required this.allow, 
-      });
+  const Details({
+    super.key,
+    required this.name,
+    required this.year,
+    required this.topspeed,
+    required this.allow,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +74,7 @@ class Details extends StatelessWidget {
               height: 10,
             ),
             Text(
-             topspeed,
+              topspeed,
               style: const TextStyle(
                 color: Colors.black,
                 fontSize: 15,
@@ -86,7 +86,7 @@ class Details extends StatelessWidget {
             Text(
               year,
               style: const TextStyle(
-                color: Colors.blue,
+                color: Colors.black,
                 fontSize: 15,
               ),
             ),
@@ -94,7 +94,7 @@ class Details extends StatelessWidget {
               height: 10,
             ),
             Text(
-             allow,
+              allow,
               style: const TextStyle(
                 color: Colors.black,
                 fontSize: 15,

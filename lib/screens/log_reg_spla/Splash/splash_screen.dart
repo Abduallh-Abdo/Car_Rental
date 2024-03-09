@@ -41,9 +41,10 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Text(
                 'Cars Rental',
                 style: TextStyle(
+                    fontFamily: 'Rakkas',
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white),
+                    color: Color(0xffF4CE14),),
               ),
             ),
           ),

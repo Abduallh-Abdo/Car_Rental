@@ -100,11 +100,12 @@ List Mercedus_C = [
     'image5': 'mercedes/Mercedus C/6.4.jpg',
     'year': "2019",
     'top speed': "249 km/h",
-  },];
+  },
+];
 // Mercedes
 List Mercedes_CLS = [
   {
-   'name': "Mercedes-AMG C63",
+    'name': "Mercedes-AMG C63",
     'image1': 'mercedes/Mercedes CLS/1.1.jpg',
     'image2': 'mercedes/Mercedes CLS/1.2.jpg',
     'image3': 'mercedes/Mercedes CLS/1.3.jpg',
@@ -116,7 +117,7 @@ List Mercedes_CLS = [
 ];
 List Merce_E_class = [
   {
-      'name': 'Mercedes-Benz E-Class 2017 ',
+    'name': 'Mercedes-Benz E-Class 2017 ',
     'image1': 'mercedes/Merce E-class/2.1.jpg',
     'image2': 'mercedes/Merce E-class/2.2.jpg',
     'image3': 'mercedes/Merce E-class/2.3.jpg',
@@ -124,12 +125,11 @@ List Merce_E_class = [
     'image5': 'mercedes/Merce E-class/2.5.jpg',
     'year': '2017',
     'top speed': "249 km/h"
- 
   },
 ];
 List Mercedes_s = [
   {
- 'name': 'Mercedes-AMG C43',
+    'name': 'Mercedes-AMG C43',
     'image1': 'mercedes/Mercedes Sl/4.1.jpg',
     'image2': 'mercedes/Mercedes Sl/4.2.jpg',
     'image3': 'mercedes/Mercedes Sl/4.3.jpg',
@@ -141,7 +141,7 @@ List Mercedes_s = [
 ];
 List Mercedes_Sl = [
   {
-     'name': 'Mercedes-Benz S-Class 2022',
+    'name': 'Mercedes-Benz S-Class 2022',
     'image1': 'mercedes/Mercedes s/3.1.jpg',
     'image2': 'mercedes/Mercedes s/3.2.jpg',
     'image3': 'mercedes/Mercedes s/3.3.jpg',
@@ -152,7 +152,7 @@ List Mercedes_Sl = [
   },
 ];
 List Mercedes_SLC = [
-   {
+  {
     'name': "Mercedes-AMG C63",
     'image1': 'mercedes/Mercedes CLS/1.1.jpg',
     'image2': 'mercedes/Mercedes CLS/1.2.jpg',
@@ -165,8 +165,7 @@ List Mercedes_SLC = [
 ];
 
 List Ford_V8 = [
-  
-    {
+  {
     'name': 'Ford V8',
     'image1': 'Ford/Ford V8/Ford Mustang V-8 USA 2024.jpeg',
     'image2': 'Ford/Ford V8/download (12).jpeg',
@@ -177,10 +176,9 @@ List Ford_V8 = [
     'year': '2024',
     'KM allow per day': '350',
   },
-  
 ];
 List ford_f_200 = [
-{
+  {
     'name': 'Ford F-200 ',
     'image1': 'Ford/Ford-f-200/fa481170-ea9c-4281-9eec-0bc57229c1d1.jpeg',
     'image2': 'Ford/Ford-f-200/FORD RAPTOR.jpeg',
@@ -194,7 +192,7 @@ List ford_f_200 = [
   },
 ];
 List ford_f_150 = [
-    {
+  {
     'name': 'Ford F-150 ',
     'image1': 'Ford/Ford-f-150/Ford F-150.jpeg',
     'image2': 'Ford/Ford-f-150/b61c56ad-34ce-4718-8e2c-1f0fb57a50c3.jpeg',
@@ -235,7 +233,7 @@ List Ford_V10 = [
   },
 ];
 List Ford_Territory = [
-   {
+  {
     'name': 'Ford Territory',
     'image1':
         'Ford/Ford territory/Ford Territory 2023 lướt bán lại lỗ ngỡ ngàng sau chưa đầy 1_000km lăn bánh (1).jpeg',
